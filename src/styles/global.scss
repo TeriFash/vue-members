@@ -1,6 +1,35 @@
-@import "components/navbar.scss";
+@import "~materialize-css/dist/css/materialize.min.css";
+
+@import "components/navbar";
+@import "reset";
+
+//$purple: (
+//        "base":       #9c27b0,
+//        "lighten-5":  #f3e5f5,
+//        "lighten-4":  #e1bee7,
+//        "lighten-3":  #ce93d8,
+//        "lighten-2":  #ba68c8,
+//        "lighten-1":  #ab47bc,
+//        "darken-1":   #8e24aa,
+//        "darken-2":   #7b1fa2,
+//        "darken-3":   #6a1b9a,
+//        "darken-4":   #4a148c,
+//        "accent-1":    #ea80fc,
+//        "accent-2":    #e040fb,
+//        "accent-3":    #d500f9,
+//        "accent-4":    #aa00ff
+//);
+
+//$primary-color: color("purple", "darken-2");
 
 body {
-    background: hsl(152, 100%, 54%);
+    background: #eee;
+}
+nav {
+  padding: 0 4em;
 }
 
+.character-counter {
+  float: right;
+  font-size: 12px;
+}

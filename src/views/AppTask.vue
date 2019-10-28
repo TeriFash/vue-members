@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1>Todos</h1>
+    <h1>Task</h1>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'app-todos',
+  name: 'app-task',
   components: {
   }
 }
