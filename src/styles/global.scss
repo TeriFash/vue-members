@@ -34,6 +34,17 @@ nav {
   font-size: 12px;
 }
 
+.card {
+  .card-image {
+    border-radius: 2px 2px 0 0;
+    min-height: 151px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+}
+
 .card-content {
   i {
     &.is-active {
