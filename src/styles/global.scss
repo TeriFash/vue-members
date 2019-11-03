@@ -33,3 +33,18 @@ nav {
   float: right;
   font-size: 12px;
 }
+
+.card-content {
+  i {
+    &.is-active {
+      color: lightgreen;
+    }
+    &.is-done {
+      color: grey;
+    }
+  }
+
+  a {
+    color: #8e24aa;
+  }
+}
