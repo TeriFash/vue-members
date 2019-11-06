@@ -11,9 +11,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #8e24aa;
-  -webkit-box-shadow: 0 1px 0 0 #8e24aa;
-  box-shadow: 0 1px 0 0 #8e24aa;
+  border-bottom: 1px solid $primary-color;
+  -webkit-box-shadow: 0 1px 0 0 $primary-color;
+  box-shadow: 0 1px 0 0 $primary-color;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -29,5 +29,5 @@ input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
 input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #8e24aa;
+  color: $primary-color;
 }
