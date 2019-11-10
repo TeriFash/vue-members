@@ -27,25 +27,20 @@
                 default: false
             }
         },
-        data() {
-            return {
-                status: false
-            };
-        },
         computed: {
             ...mapGetters({
                 themeStatus: 'themeStatus'
             })
         },
         created() {
-
+            this.status = this.themeStatus
         },
         methods: {
             ...mapActions({
                 setTheme: 'setThemeStatus'
             }),
             updateStatus() {
-                this.setTheme(this.status)
+                this.setTheme(!this.status)
             }
         }
     }

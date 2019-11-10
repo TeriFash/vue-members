@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col s6 offset-s3">
+    <div class="col s12">
       <h3>Create</h3>
       <form @submit.prevent="onSubmitHendler">
         <div class="input-field">

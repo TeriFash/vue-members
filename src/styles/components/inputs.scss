@@ -1,0 +1,13 @@
+.switch label {
+  .lever:before {
+    background-color: rgba(20, 0, 210, 0.15);
+  }
+
+  input[type=checkbox]:checked + .lever {
+    background-color: darken($primary-color, 9);
+
+    &:after {
+      background-color: darken($primary-color, 13);
+    }
+  }
+}

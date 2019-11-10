@@ -1,0 +1,37 @@
+[dark-theme] {
+  &.app-body {
+    background-color: $black;
+    color: $white;
+  }
+
+  hr {
+    background: $white;
+    border-bottom-color: $white;
+  }
+
+  .card {
+    background-color: $black;
+
+    .card-reveal {
+      background-color: $black;
+    }
+
+    .card-title {
+      color: white!important;
+    }
+  }
+
+  .modal {
+    background-color: $black;
+  }
+
+  .datepicker-controls {
+    svg {
+      fill: $white;
+    }
+  }
+
+  input[type=text]:not(.browser-default) {
+    color: $white;
+  }
+}

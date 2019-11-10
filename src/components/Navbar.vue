@@ -1,5 +1,5 @@
 <template>
-    <nav class="purple darken-1">
+    <nav class="app-nav purple darken-1">
         <div class="nav-wrapper">
             <router-link to="/" class="brand-logo">Top Tasker</router-link>
             <ul id="nav-mobile" class="right hide-on-med-and-down">

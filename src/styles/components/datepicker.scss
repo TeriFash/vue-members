@@ -1,0 +1,23 @@
+.datepicker-date-display {
+  background-color: $primary-color;
+  margin-right: 16px;
+}
+
+.datepicker-table {
+  & td.is-selected {
+    background-color: $primary-color;
+  }
+}
+
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+  color: $primary-color;
+}
+
+.datepicker-controls {
+  button:focus {
+    background-color: $primary-color;
+  }
+}
