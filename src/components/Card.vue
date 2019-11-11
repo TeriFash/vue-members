@@ -14,7 +14,18 @@
                             {{item.title}}
                             <i class="material-icons right">more_vert</i>
                         </span>
-                    <p><a href="#">View all</a></p>
+                    <p>
+                        <router-link
+                            tag="a"
+                            :to="/task/"
+                            exact
+                            active-class="active"
+                            href="#"
+                        >
+                            Create
+                        </router-link>
+
+                    </p>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">{{item.title}}<i
@@ -29,6 +40,7 @@
 
 <script>
     import NotFound from '@/components/NotFound'
+    import appTask from '@/views/'
 
     export default {
         name: 'card',
@@ -44,8 +56,7 @@
             },
         },
         data() {
-            return {
-            };
+            return {};
         },
         updated() {
 
