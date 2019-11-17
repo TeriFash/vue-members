@@ -1,3 +1,30 @@
 .app-nav {
   padding: 0 4em;
 }
+
+header, main, footer {
+  //padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+.sidenav-main {
+  .title {
+    position: relative;
+    min-height: 100px;
+    background-color: $primary-color;
+    margin-bottom: 2em;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      color: inherit;
+      font-size: 2em;
+    }
+  }
+}

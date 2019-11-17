@@ -1,7 +1,23 @@
 [dark-theme] {
-  &.app-body {
+  //&.app-body {
+  //  &:before {
+  //    content: '';
+  //    position: absolute;
+  //    width: 100vw;
+  //    height: 100vh;
+  //    background-color: $black;
+  //    left: 0;
+  //    top: 0;
+  //    //z-index: 0;
+  //  }
+  //}
+
+  &.app-body,
+  .mыodal,
+  .sidenav,
+  .card,
+  .card .card-reveal {
     background-color: $black;
-    color: $white;
   }
 
   hr {
@@ -10,19 +26,9 @@
   }
 
   .card {
-    background-color: $black;
-
-    .card-reveal {
-      background-color: $black;
-    }
-
     .card-title {
       color: white!important;
     }
-  }
-
-  .modal {
-    background-color: $black;
   }
 
   .datepicker-controls {
@@ -31,6 +37,14 @@
     }
   }
 
+  table {
+    color: $black;
+  }
+
+  textarea,
+  &.app-body,
+  .sidenav-main li:not(.title) a,
+  .chips .input,
   input[type=text]:not(.browser-default) {
     color: $white;
   }

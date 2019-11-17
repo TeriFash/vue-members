@@ -7,16 +7,19 @@ const routes = [
   {
     path: '/',
     name: 'create',
+    meta: { transitionName: 'slide' },
     component: () => import('../views/AppCreate.vue')
   },
   {
     path: '/list',
     name: 'list',
+    meta: { transitionName: 'slide' },
     component: () => import('../views/AppList.vue')
   },
   {
-    path: '/task/:id',
+    path: `/task/:id`,
     name: 'task',
+    meta: { transitionName: 'slide' },
     component: () => import('../views/AppTask.vue')
   }
 ]

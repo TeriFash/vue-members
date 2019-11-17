@@ -1,0 +1,65 @@
+.app-body {
+  background-color: $white;
+  height: 100vh;
+
+  .row {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+}
+
+body {
+  //width: 100vw;
+  //height: 100vh;
+}
+
+hr {
+  background: $black;
+  border-bottom-color: $black;
+  border-style: solid;
+}
+
+.character-counter {
+  float: right;
+  font-size: 12px;
+}
+
+.without-underline {
+  border-bottom: none!important;
+  box-shadow: none!important;
+
+  &:focus {
+    border-bottom: none!important;
+    box-shadow: none!important;
+  }
+
+  > * {
+    border-bottom: none!important;
+    box-shadow: none!important;
+    &:focus {
+      border-bottom: none!important;
+      box-shadow: none!important;
+    }
+  }
+}
+
+// Helpers class
+.margin-bottom-none {
+  margin-bottom: 0;
+}
+
+.margin-top-none {
+  margin-top: 0;
+}
+
+.margin-top-2 {
+  margin-top: 2em;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}

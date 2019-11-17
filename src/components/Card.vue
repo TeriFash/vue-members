@@ -15,16 +15,17 @@
                             <i class="material-icons right">more_vert</i>
                         </span>
                     <p>
+
+
                         <router-link
+                            :to="'/task/' + item.id"
                             tag="a"
-                            :to="/task/"
                             exact
                             active-class="active"
                             href="#"
                         >
-                            Create
+                            Open full
                         </router-link>
-
                     </p>
                 </div>
                 <div class="card-reveal">
@@ -40,7 +41,6 @@
 
 <script>
     import NotFound from '@/components/NotFound'
-    import appTask from '@/views/'
 
     export default {
         name: 'card',

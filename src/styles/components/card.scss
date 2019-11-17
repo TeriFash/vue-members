@@ -12,7 +12,7 @@
 .card-content {
   i {
     &.is-active {
-      color: lightgreen;
+      color: color("light-green", "base");
     }
     &.is-done {
       color: grey;
@@ -21,5 +21,22 @@
 
   a {
     color: $primary-color;
+  }
+}
+
+.card-task {
+  padding: 1em;
+  border-radius: 3em;
+
+  .input-title input {
+    font-size: 3em;
+  }
+
+  input, textarea, .chips {
+    @extend .without-underline;
+  }
+
+  textarea {
+    min-height: 100px;
   }
 }
