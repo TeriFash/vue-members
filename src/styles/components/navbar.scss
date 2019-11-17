@@ -1,14 +1,11 @@
 .app-nav {
   padding: 0 4em;
+  background-color: $secondary-color;
 }
 
-header, main, footer {
-  //padding-left: 300px;
-}
-
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width: 992px) {
   header, main, footer {
-    padding-left: 0;
+    //padding-left: 0;
   }
 }
 
@@ -16,15 +13,25 @@ header, main, footer {
   .title {
     position: relative;
     min-height: 100px;
-    background-color: $primary-color;
+    background-color: $secondary-color;
     margin-bottom: 2em;
     color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
+
     a {
       color: inherit;
       font-size: 2em;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+  li a {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
     }
   }
 }

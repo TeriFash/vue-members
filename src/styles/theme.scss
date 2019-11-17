@@ -31,21 +31,22 @@
     }
   }
 
-  .datepicker-controls {
-    svg {
-      fill: $white;
-    }
-  }
-
   table {
     color: $black;
   }
 
   textarea,
   &.app-body,
-  .sidenav-main li:not(.title) a,
   .chips .input,
+  .back-action a,
+  .sidenav-main li:not(.title) a,
   input[type=text]:not(.browser-default) {
     color: $white;
+  }
+
+  .datepicker-controls {
+    input[type=text]:not(.browser-default) {
+      color: $black;
+    }
   }
 }

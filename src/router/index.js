@@ -21,6 +21,15 @@ const routes = [
     name: 'task',
     meta: { transitionName: 'slide' },
     component: () => import('../views/AppTask.vue')
+  },
+  {
+    path: '/404',
+    name: '404',
+    meta: { transitionName: 'slide' },
+    component: () => import('../views/AppNotFound.vue')
+  }, {
+    path: '*',
+    redirect: '/404'
   }
 ]
 

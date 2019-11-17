@@ -1,29 +1,45 @@
 <template>
     <div class="row">
-        <div class="col s12">
-            <h3>List</h3>
-            <hr>
-        </div>
-        <card :items="tasks" />
+        <top-action
+            class="margin-top-2 margin-bottom-1"
+            @toggler="switchView"
+            :toggler-type="tasksViewMethod"
+            :toggler-icon="['apps', 'dehaze']"
+            title="Tasks list">
+        </top-action>
+        <tasks :items="tasks" :view-type="tasksViewMethod"/>
     </div>
 </template>
 
 <script>
-    import Card from '@/components/Card'
+    import {mapGetters} from 'vuex'
+    import Tasks from '@/components/Tasks'
+    import TopAction from '@/components/TopAction'
 
     export default {
         name: 'app-list',
         components: {
-            Card
+            Tasks,
+            TopAction
         },
         data() {
             return {
-                status: true
+                tasksViewMethod: 'list'
             };
         },
         computed: {
-            tasks() {
-                return this.$store.getters.tasks
+            ...mapGetters({
+                tasks: 'tasks'
+            }),
+            actionIcon() {
+                return this.tasksViewMethod === 'card' ? 'apps' : 'dehaze'
+            }
+        },
+        methods: {
+            switchView() {
+                if (this.tasksViewMethod === 'card') {
+                    return this.tasksViewMethod = 'list'
+                } return this.tasksViewMethod = 'card'
             }
         }
     }

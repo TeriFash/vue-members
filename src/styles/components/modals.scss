@@ -1,0 +1,34 @@
+.datepicker-modal-main {
+  border-radius: $primary-radius;
+
+  .datepicker-date-display {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      width: calc(100% + 2em);
+      height: 100%;
+      background-color: $secondary-color;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  .datepicker-calendar-container {
+    background: $white;
+    border-radius: $primary-radius;
+    z-index: 1;
+    box-shadow: $primary-shadow;
+
+    .datepicker-controls {
+      button:focus {
+        border-radius: 50%;
+        svg {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+

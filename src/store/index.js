@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     tasks: JSON.parse(localStorage.getItem('tasks') || '[]'),
+    settings: JSON.parse(localStorage.getItem('settings') || '{}'),
     themes: JSON.parse(localStorage.getItem('themes') || false)
   },
   mutations: {
@@ -15,9 +16,9 @@ export default new Vuex.Store({
       localStorage.setItem('tasks', JSON.stringify(state.tasks))
     },
     setThemeStatus(state, theme) {
-      state.themes = theme
+      state.settings.theme = theme
 
-      localStorage.setItem('themes', JSON.stringify(state.themes))
+      localStorage.setItem('settings', JSON.stringify(state.settings))
     }
   },
   actions: {
@@ -31,7 +32,7 @@ export default new Vuex.Store({
   getters: {
     tasks: s => s.tasks,
     taskById: s => id => s.tasks.find(t => t.id === id),
-    themeStatus: s => s.themes
+    themeStatus: s => s.settings.theme
   },
   modules: {
   }

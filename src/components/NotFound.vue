@@ -1,8 +1,8 @@
 <template>
     <div class="not-found">
-        <div class="not-found__title">{{ title }}</div>
-        <div v-if="description" class="not-found__description">{{ description }}</div>
-        <div v-if="icon" class="not-found__icon"><i></i></div>
+        <div class="not-found-title">{{ title }}</div>
+        <div v-if="description" class="not-found-description">{{ description }}</div>
+        <div v-if="icon" class="not-found-icon"><i></i></div>
     </div>
 </template>
 

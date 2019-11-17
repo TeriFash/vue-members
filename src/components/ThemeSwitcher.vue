@@ -4,7 +4,7 @@
         <div class="switch">
             <label>
 
-                <input @input="updateStatus" v-model="status" type="checkbox">
+                <input @input="updateStatus" v-model="activeTheme" type="checkbox">
                 <span class="lever"></span>
 
             </label>
@@ -29,18 +29,32 @@
         },
         computed: {
             ...mapGetters({
-                themeStatus: 'themeStatus'
+                status: 'themeStatus'
             })
         },
-        created() {
-            this.status = this.themeStatus
+        data() {
+            return {
+                activeTheme: null
+            };
+        },
+        mounted() {
+            this.activeTheme = this.status
+            this.updateStatus()
+            console.log('----', this.activeTheme)
+        },
+        updated(){
+            this.activeTheme = this.status
         },
         methods: {
             ...mapActions({
                 setTheme: 'setThemeStatus'
             }),
             updateStatus() {
-                this.setTheme(!this.status)
+                if (typeof(this.status) === "undefined") {
+                    return this.setTheme(false)
+                } else {
+                    this.setTheme(!this.activeTheme)
+                }
             }
         }
     }

@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col s12">
-            <h3>Create</h3>
+            <h3>Create task</h3>
             <form @submit.prevent="onSubmitHendler">
                 <div class="input-field">
                     <input v-model="title" id="title" type="text" class="validate" required>
@@ -48,6 +48,7 @@
                 defaultDate: new Date(),
                 setDefaultDate: true
             })
+            this.date.modalEl.classList.add('datepicker-modal-main')
         },
         methods: {
             ...mapActions({

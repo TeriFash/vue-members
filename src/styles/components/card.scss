@@ -40,3 +40,19 @@
     min-height: 100px;
   }
 }
+
+.not-found {
+  @extend .card;
+  @extend .small;
+  @extend .flex-center;
+
+  box-shadow: $secondary-shadow;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  &-title {
+    user-select: none;
+    opacity: .1;
+    font-size: 3.5em;
+  }
+}

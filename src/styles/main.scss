@@ -1,7 +1,3 @@
-.transition-theme {
-  transition: background-color .5s ease-out;
-}
-
 .app-body {
   background-color: $white;
   height: 100vh;
@@ -22,58 +18,54 @@
   @extend .transition-theme;
 }
 
-body {
-  //width: 100vw;
-  //height: 100vh;
-}
-
-hr {
-  background: $black;
-  border-bottom-color: $black;
-  border-style: solid;
-}
-
 .character-counter {
   float: right;
   font-size: 12px;
 }
 
-.without-underline {
-  border-bottom: none!important;
-  box-shadow: none!important;
+form {
+  padding-bottom: 1em;
+  & .btn {
+    box-shadow: $secondary-shadow;
 
-  &:focus {
-    border-bottom: none!important;
-    box-shadow: none!important;
-  }
-
-  > * {
-    border-bottom: none!important;
-    box-shadow: none!important;
-    &:focus {
-      border-bottom: none!important;
-      box-shadow: none!important;
+    &:hover {
+      box-shadow: $secondary-shadow;
     }
   }
 }
 
-// Helpers class
-.margin-bottom-none {
-  margin-bottom: 0;
-}
+.top-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-.margin-top-none {
-  margin-top: 0;
-}
+  padding: 0 10px;
+  min-height: 44px;
 
-.margin-top-2 {
-  margin-top: 2em;
-}
+  a {
+    &:hover {
+      //@extend .bounce
+    }
+    line-height: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    color: $black;
 
-.overflow-auto {
-  overflow: auto;
-}
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.overflow-visible {
-  overflow: visible !important;
+  &-left {
+    * {
+      margin: 0;
+      line-height: normal;
+    }
+  }
+
+  &-right {
+    align-items: center;
+    height: max-content;
+    display: flex;
+  }
 }

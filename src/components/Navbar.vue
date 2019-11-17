@@ -1,6 +1,6 @@
 <template>
     <div class="naw-header">
-        <nav class="app-nav purple darken-1">
+        <nav class="app-nav">
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
             <ul id="slide-out" class="sidenav sidenav-main" ref="sidenav">
@@ -12,17 +12,17 @@
                     to="/"
                     exact
                     active-class="active"
-                    class="waves-effect"
+                    class="waves-effect sidenav-close"
                 >
-                    <a href="#">Create</a>
+                    <a href="#">Home</a>
                 </router-link>
                 <router-link
                     tag="li"
                     to="/list"
                     active-class="active"
-                    class="waves-effect"
+                    class="waves-effect sidenav-close"
                 >
-                    <a href="#">List</a>
+                    <a href="#">Tasks</a>
                 </router-link>
                 <li>
                     <theme-switcher/>
@@ -38,14 +38,14 @@
                         exact
                         active-class="active"
                     >
-                        <a href="#">Create</a>
+                        <a href="#">Home</a>
                     </router-link>
                     <router-link
                         tag="li"
                         to="/list"
                         active-class="active"
                     >
-                        <a href="#">List</a>
+                        <a href="#">Tasks</a>
                     </router-link>
                     <li>
                         <theme-switcher/>
@@ -61,14 +61,17 @@
 
     export default {
         name: 'navbar',
+        data: () => ({
+            isOpen: false
+        }),
         components: {
             ThemeSwitcher
         },
         mounted() {
             this.sidenav = M.Sidenav.init(this.$refs.sidenav)
         },
-        methods: {
-
+        destroyed() {
+            this.sidenav.destroy()
         }
     }
 </script>

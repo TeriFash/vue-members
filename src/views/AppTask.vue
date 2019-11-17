@@ -1,6 +1,6 @@
 <template>
     <div class="row overflow-visible">
-        <div class="left-align back-action margin-top-2">
+        <div class="left-align top-action margin-top-2">
             <a
                 href="#"
                 aria-label="back"
@@ -20,7 +20,7 @@
                     <textarea v-model="description" class="materialize-textarea" data-length="2043"></textarea>
                 </div>
                 <input type="text" ref="datepicker">
-                <div class="center-align">
+                <div class="left-align">
                     <button class="btn btn-main purple darken-1" type="submit">Save</button>
                 </div>
             </form>
@@ -70,6 +70,7 @@
                 defaultDate: new Date(),
                 setDefaultDate: true
             })
+            this.date.modalEl.classList.add('datepicker-modal-main')
         },
         methods: {
             ...mapActions({
