@@ -1,11 +1,25 @@
+.transition-theme {
+  transition: background-color .5s ease-out;
+}
+
 .app-body {
   background-color: $white;
   height: 100vh;
+
+  @extend .transition-theme;
 
   .row {
     overflow-y: hidden;
     overflow-x: auto;
   }
+}
+
+.app-body,
+.mыodal,
+.sidenav,
+.card,
+.card .card-reveal {
+  @extend .transition-theme;
 }
 
 body {
