@@ -1,29 +1,26 @@
-# vue-members
+# Members from VUE
 
-## Project setup
-```
-yarn install
-```
+Simple note management application
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+🚚 Project setup
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+> `yarn install`
 
-### Run your tests
-```
-yarn run test
-```
+🏃 Compiles and hot-reloads for development
 
-### Lints and fixes files
-```
-yarn run lint
-```
+> `yarn run serve`
 
-### Customize configuration
+🎁 Compiles and minifies for production
+
+> `yarn run build`
+
+☠ Run your tests
+
+> `yarn run test`
+
+👀 Lints and fixes files
+
+> `yarn run lint`
+
+⚒ Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
